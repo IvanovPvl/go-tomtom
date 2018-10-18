@@ -10,7 +10,7 @@ const baseUrl = "https://api.tomtom.com"
 
 type Client struct {
 	BaseUrl     *url.URL
-	ApiVersion  uint
+	ApiVersion  uint32
 	ApiKey      string
 	ContentType string
 	httpClient  *http.Client
@@ -18,7 +18,7 @@ type Client struct {
 	Routing *RoutingService
 }
 
-func NewClient(apiVersion uint, apiKey string, contentType string, httpClient *http.Client) *Client {
+func NewClient(apiVersion uint32, apiKey string, contentType string, httpClient *http.Client) *Client {
 	if httpClient == nil {
 		httpClient = http.DefaultClient
 	}

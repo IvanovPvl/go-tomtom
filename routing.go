@@ -27,9 +27,9 @@ type Leg struct {
 }
 
 type Summary struct {
-	LengthInMeters        uint
-	TravelTimeInSeconds   uint
-	TrafficDelayInSeconds uint
+	LengthInMeters        uint32
+	TravelTimeInSeconds   uint32
+	TrafficDelayInSeconds uint32
 	DepartureTime         string
 }
 
@@ -39,8 +39,8 @@ type Point struct {
 }
 
 type Section struct {
-	StartPointIndex uint
-	EndPointIndex   uint
+	StartPointIndex uint32
+	EndPointIndex   uint32
 	SectionType     string
 	TravelMode      string
 }
